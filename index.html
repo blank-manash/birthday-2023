@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun for my Gamakshi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+</head>
+
+<body
+    class="bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 min-h-screen flex flex-col items-center justify-center">
+    <div class="px-4">
+        <h1 class="text-4xl text-center text-pink-600 font-bold mb-5">Beautiful Wordle</h1>
+        <div id="wordleGrid" class="grid gap-2"></div>
+    </div>
+    <div id="snackbar"
+        class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-3 rounded-full opacity-0 transition-opacity duration-300">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
