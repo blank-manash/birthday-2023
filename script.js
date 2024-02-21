@@ -1,5 +1,5 @@
 // script.js
-const words = ["HAPPY", "BIRTH", "SWEET", "HEART", "ADORE", "YOURS", "SMILE", "BLISS", "MINES"]
+const words = ["HAPPY", "BIRTH", "SWEET", "HEART", "ADORE", "YOURS", "SMILE", "BLISS", "SHINE"]
 const hints = [
     "H_PP_", // For HAPPY
     "_IR__", // For BIRTH
@@ -9,8 +9,19 @@ const hints = [
     "Y__R_", // For YOURS
     "S_IL_", // For SMILE
     "BLI__", // For BLISS
-    "_INE_", // For MINES
+    "__INE", // For MINES
 ];
+
+function playMusic() {
+    var audio = document.getElementById('backgroundMusic');
+    if (audio.muted) {
+        audio.muted = false;
+        audio.play(); // Attempt to play the audio if it was muted
+    }
+}
+
+document.addEventListener('click', playMusic)
+
 let currentRow = 0;
 function createGrid() {
     const grid = document.getElementById('wordleGrid');
@@ -64,6 +75,7 @@ function handleInput(input, rowIndex) {
     }
 
     checkCompletion(rowIndex);
+    playMusic()
 }
 
 function checkCompletion(rowIndex) {
